@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jojo</title>
+</head>
+<body>
+    <h1>Frase do dia</h1>
+    <form method="post">
+        <label for="nomee">Nome</label>
+        <input type="text" name="nomee">
+        <label for="frasee">Frase</label>
+        <input type="text" name="frasee" >
+        <button type="submit">Enviar</button>
+    </form>
+    <h2>A Sabedoria:</h2>
+    {%for post in postagens%}
+    <p>{{post.pessoa}} - {{post.frase}}</p>
+    {% endfor%}
+</body>
+</html>
